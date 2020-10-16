@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entry" representedClassName="Entry" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="lift" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lift" inverseName="entry" inverseEntity="Lift"/>
+    </entity>
+    <entity name="Lift" representedClassName="Lift" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="entry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entry" inverseName="lift" inverseEntity="Entry"/>
+    </entity>
+    <elements>
+        <element name="Entry" positionX="-63" positionY="-9" width="128" height="88"/>
+        <element name="Lift" positionX="-63" positionY="-18" width="128" height="73"/>
+    </elements>
+</model>
