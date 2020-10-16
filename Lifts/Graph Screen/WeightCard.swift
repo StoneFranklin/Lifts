@@ -22,7 +22,6 @@ struct WeightCard: View {
                 Text("Current max: " + String(weight) + " lbs")
             }
         }
-        .foregroundColor(Color.white)
         .padding()
     }
 }
